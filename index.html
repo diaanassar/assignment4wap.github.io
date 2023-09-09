@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 5px;
+        }
+        .payment-label {
+            margin-top: 10px;
+        }
+        .submit-btn {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .reset-btn {
+            margin-top: 20px;
+            background-color: #ccc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .regtext{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Workshop Registration</h1>
+            <div class="dropdown">
+                More actions
+                <div class="dropdown-content">
+                    <!-- Add dropdown menu items here -->
+                </div>
+            </div>
+        </div>
+        <div class="regtext"><label>Register now while seats are available!</label></div>
+        <form>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="company">Company/Institution</label>
+            <input type="text" id="company" name="company" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <!-- Add state options here -->
+            </select>
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <!-- Add country options here -->
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="text" id="Email" name="Email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label class="regtext">Lunch</label>
+            
+            <label for="meal">Meal Preference:</label>
+            <select id="meal" name="meal">
+                <option value="vegetarian" selected>Vegetarian</option>
+                <option value="beef">Beef</option>
+            </select>
+            
+            <label class="regtext">Payment Details</label>
+            <div class="payment-label">Payment Mode:</div>
+            <label for="cash">Cash:</label>
+            <input type="checkbox" id="cash" name="payment" value="cash">
+            
+            <label for="cheque">Cheque:</label>
+            <input type="checkbox" id="cheque" name="payment" value="cheque">
+            
+            <label for="demanddraft">Demand Draft:</label>
+            <input type="checkbox" id="demanddraft" name="payment" value="demanddraft">
+            
+            <label for="cheque">DD/Cheque No.</label>
+            <input type="text" id="cheque" name="cheque">
+
+            <label for="drawn">Drawn On -Bank Name-</label>
+            <input type="text" id="drawn" name="drawn">
+
+            <label for="payable">Payable at</label>
+            <input type="text" id="payable" name="payable">
+
+            <label for="cheque">DD/Cheque No.</label>
+            <input type="text" id="cheque" name="cheque">
+
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
